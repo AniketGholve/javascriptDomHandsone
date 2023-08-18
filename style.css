@@ -1,0 +1,37 @@
+
+body{
+    background-color: #3D087B;
+    text-align: center;
+    height: 95vh;
+    display: grid;
+    place-content: center;
+}
+#divPos{
+    display: flex;
+    gap: 10px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.heading , .heading1{
+    color: azure;
+    text-shadow: 2px 2px 30px azure;
+}
+#allBox{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin:50px 0px;
+    width: 100%;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-content: center;
+    background-color: antiquewhite;
+    font-size: 30px;
+    box-shadow: 2px 2px 100px black;
+}
