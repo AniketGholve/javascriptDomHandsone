@@ -9,19 +9,65 @@
 </head>
 
 <body>
-    <h1 class="heading">Javascript Handson</h1>
-    <p id="text"></p>
-    <div id="allBox">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+    <div class="container">
+        <h1 class="heading">Javascript Handson</h1>
+        <p id="text"></p>
+        <div id="allBox">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <h1 class="heading1">Hello</h1>
+        <div class="btn">
+            <button onclick="changeDirection()">Change Flex Direction</button>
+            <button id="changesInText">Change Content of text</button>
+            <button id="replaceText">Replace Text</button>
+        </div>
     </div>
-    <h1 class="heading1">Hello</h1>
-    <div class="btn">
-        <button onclick="changeDirection()">Change Flex Direction</button>
-        <button id="changesInText">Change Content of text</button>
-        <button id="replaceText">Replace Text</button>
-    </div>
+    <pre>
+        Q1 What’s the difference between window vs document?
+        ans -> Window refers to the entire object of the tab or brouser
+               document refres to the dom structure of the currently loaded html
+               windows object includes documnet
+
+        Q2 Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
+        ans ->
+        function setTimeInBox(){
+            let date=new Date();
+            if(date.getHours()>12){
+                box[0].innerText=date.getHours()-12;
+            }
+            else{ 
+                box[0].innerText=date.getHours();
+            }
+            box[1].innerText=date.getMinutes();
+            box[2].innerText=date.getSeconds();
+        }
+        setInterval(setTimeInBox,1000)
+
+
+        Q3 "Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"
+        ans -> 
+        let data=document.querySelector("h1");
+        data.setAttribute("style","color:red")
+        data.setAttribute("id","heading")
+
+        Q4 "Change the heading from ""Hello"" to ""Hello World"" using DOM functions"
+        ans -> &lt;h1 class="heading1"&gt; heading &lt;/h1&gt;
+        document.getElementById("changesInText").addEventListener("click",()=>{
+            document.querySelector(".heading1").innerText="Hello World"
+        })
+
+        Q5 Write the code to access element which is having class as "box"
+        ans -> let elements=document.getElementsByClassName("box");
+
+        Q6 Write the code to access element which is having tag as "h1"
+        ans -> let elements = document.getElementsByTagName("h1");
+
+        Q7 Write the code to access element which is having id as "text"
+        ans -> let element=document.getElementById("text")
+    </pre>
 </body>
 <script src="./script.js"></script>
+
 </html>

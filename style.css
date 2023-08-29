@@ -1,10 +1,14 @@
 
 body{
     background-color: #3D087B;
+}
+.container{
     text-align: center;
-    height: 95vh;
     display: grid;
     place-content: center;
+}
+pre{
+    font-size: 20px;
 }
 #divPos{
     display: flex;
@@ -15,7 +19,7 @@ body{
     justify-content: center;
     gap: 10px;
 }
-.heading , .heading1{
+.heading , .heading1,pre{
     color: azure;
     text-shadow: 2px 2px 30px azure;
 }
